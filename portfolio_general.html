@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Hussain Saeed | Digital Marketing & Content Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0d1117;--ink2:#2d3340;--ink3:#6b7280;
+  --gold:#c9a84c;--gold-dark:#9a7a2e;--gold-light:#fdf6e3;
+  --surface:#ffffff;--surface2:#f8f7f4;--surface3:#f0ede6;
+  --border:#e2ddd4;--accent:#1a2332;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--surface2);color:var(--ink);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,35,50,0.97);backdrop-filter:blur(10px);padding:0 2rem}
+.nav-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:60px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:0.04em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.78rem;color:rgba(255,255,255,0.7);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;background:var(--accent);padding:7rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-left{position:relative;z-index:1;padding-right:3rem}
+.hero-tag{display:inline-block;font-size:0.72rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:0.3rem 0.9rem;border-radius:2px;margin-bottom:1.5rem}
+.hero h1{font-size:3.4rem;line-height:1.15;color:#fff;margin-bottom:1.2rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.65);margin-bottom:2rem;max-width:480px;line-height:1.8}
+.hero-stats{display:flex;gap:2.5rem;margin-bottom:2.5rem}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:0.72rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.2rem}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--accent);padding:0.85rem 2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s}
+.btn-primary:hover{background:#dbb85e}
+.btn-outline{display:inline-block;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.8);padding:0.85rem 2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;margin-left:1rem;transition:border-color 0.2s,color 0.2s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem}
+.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.2);padding:1.2rem 1.5rem;border-radius:2px}
+.hero-card h4{font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:500;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.3rem}
+.hero-card p{font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6}
+.hero-divider{width:48px;height:2px;background:var(--gold);margin-bottom:1.5rem}
+section{padding:5rem 2rem}
+.container{max-width:1140px;margin:0 auto}
+.section-label{font-size:0.72rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+.section-title{font-size:2.4rem;color:var(--ink);margin-bottom:0.5rem}
+.section-rule{width:40px;height:2px;background:var(--gold);margin:1rem 0 3rem}
+.competencies{background:var(--surface)}
+.comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border)}
+.comp-card{background:var(--surface);padding:2rem;transition:background 0.2s}
+.comp-card:hover{background:var(--gold-light)}
+.comp-icon{font-size:1.6rem;margin-bottom:1rem}
+.comp-card h3{font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;color:var(--ink);margin-bottom:0.5rem}
+.comp-card p{font-size:0.85rem;color:var(--ink3);line-height:1.7}
+.portfolio-section{background:var(--surface2)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border)}
+.portfolio-item{background:var(--surface);cursor:pointer;position:relative;overflow:hidden}
+.portfolio-item:hover .p-overlay{opacity:1}
+.portfolio-item:hover .p-img-inner{transform:scale(1.04)}
+.p-img{height:200px;overflow:hidden}
+.p-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.4s ease}
+.p-body{padding:1.4rem}
+.p-tag{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;color:var(--gold-dark);margin-bottom:0.4rem}
+.p-body h3{font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;color:var(--ink);margin-bottom:0.4rem;line-height:1.4}
+.p-body p{font-size:0.82rem;color:var(--ink3);line-height:1.6}
+.p-overlay{position:absolute;inset:0;background:rgba(26,35,50,0.92);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s}
+.p-overlay span{font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;color:var(--gold);border:1px solid rgba(201,168,76,0.5);padding:0.6rem 1.5rem}
+.p-chips{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.9rem}
+.p-chip{font-size:0.68rem;padding:0.2rem 0.6rem;background:var(--surface3);color:var(--ink3);border-radius:2px}
+.modal-bg{display:none;position:fixed;inset:0;z-index:1000;background:rgba(13,17,23,0.88);overflow-y:auto;padding:2rem 1rem}
+.modal-bg.active{display:flex;align-items:flex-start;justify-content:center}
+.modal{background:var(--surface);max-width:780px;width:100%;position:relative;animation:slideUp 0.3s ease}
+@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-close{position:absolute;top:1.2rem;right:1.2rem;width:36px;height:36px;background:rgba(255,255,255,0.15);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#fff;z-index:10;font-family:'DM Sans',sans-serif;border-radius:2px}
+.modal-close:hover{background:rgba(255,255,255,0.25)}
+.modal-header{background:var(--accent);padding:2.5rem 2.5rem 2rem}
+.modal-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7rem;font-weight:500}
+.modal-header h2{font-size:1.8rem;color:#fff;margin-bottom:0.8rem;line-height:1.25}
+.modal-header p{font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.7;max-width:560px}
+.modal-body{padding:2.5rem}
+.modal-section{margin-bottom:2.2rem}
+.modal-section h4{font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border)}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.result-box{background:var(--surface2);border:1px solid var(--border);padding:1rem;text-align:center}
+.result-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--accent)}
+.result-label{font-size:0.72rem;color:var(--ink3);margin-top:0.2rem;line-height:1.4}
+.sample-box{background:var(--surface2);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin-bottom:1rem;font-size:0.87rem;color:var(--ink2);line-height:1.8}
+.sample-box strong{display:block;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.5rem;font-family:'DM Sans',sans-serif}
+.sample-post{background:#f0f2f5;border-radius:8px;padding:1.2rem;margin-bottom:1rem;font-size:0.87rem;line-height:1.7;color:#1c1e21}
+.post-meta{font-size:0.75rem;color:#65676b;margin-bottom:0.7rem;display:flex;align-items:center;gap:0.6rem}
+.post-avatar{width:32px;height:32px;background:var(--accent);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--gold);font-size:0.6rem;font-weight:700;flex-shrink:0}
+.post-engagement{font-size:0.75rem;color:#65676b;margin-top:0.8rem;border-top:1px solid #ddd;padding-top:0.6rem}
+.caption-box{border:1px solid var(--border);border-radius:4px;padding:1rem 1.2rem;margin-bottom:0.8rem}
+.caption-box .platform{font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.5rem}
+.caption-box p{font-size:0.87rem;color:var(--ink2);line-height:1.75}
+.bi-chart{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.chart-bar-wrap{background:var(--surface2);padding:1rem;border:1px solid var(--border)}
+.chart-bar-wrap h5{font-family:'DM Sans',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.8rem;font-weight:500}
+.bar-row{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;font-size:0.78rem}
+.bar-label{width:85px;color:var(--ink2);flex-shrink:0;font-size:0.77rem}
+.bar-track{flex:1;background:var(--border);height:7px;border-radius:1px;overflow:hidden}
+.bar-fill{height:100%;background:var(--gold);border-radius:1px}
+.bar-val{width:34px;text-align:right;color:var(--ink3);font-size:0.77rem}
+.writing-sample{font-size:0.9rem;color:var(--ink2);line-height:1.85;margin-bottom:1.2rem}
+.writing-sample p{margin-bottom:0.8rem}
+.writing-sample .headline{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:0.8rem;line-height:1.35}
+.doc-preview{border:1px solid var(--border);overflow:hidden;margin-bottom:1rem}
+.doc-header{background:var(--accent);color:#fff;padding:0.9rem 1.4rem;font-size:0.83rem;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif}
+.doc-body{padding:1.2rem 1.5rem;background:#fff}
+.doc-body p{font-size:0.87rem;color:var(--ink2);line-height:1.8;margin-bottom:0.6rem}
+.doc-body ul{margin-left:1.2rem;margin-bottom:0.6rem}
+.doc-body ul li{font-size:0.87rem;color:var(--ink2);line-height:1.7;margin-bottom:0.2rem}
+.insight-row{display:flex;gap:0.8rem;margin-bottom:0.9rem;align-items:flex-start}
+.insight-icon{width:32px;height:32px;background:var(--accent);border-radius:2px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;font-weight:500}
+.insight-text{font-size:0.87rem;color:var(--ink2);line-height:1.65}
+.insight-text strong{display:block;color:var(--ink);font-weight:500;margin-bottom:0.15rem;font-family:'DM Sans',sans-serif}
+.table-sample{width:100%;border-collapse:collapse;font-size:0.83rem;margin-bottom:1rem}
+.table-sample th{background:var(--accent);color:var(--gold);text-align:left;padding:0.7rem 1rem;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;font-family:'DM Sans',sans-serif}
+.table-sample td{padding:0.65rem 1rem;border-bottom:1px solid var(--border);color:var(--ink2)}
+.table-sample tr:last-child td{border-bottom:none}
+.table-sample tr:hover td{background:var(--gold-light)}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem}
+.tag{font-size:0.75rem;padding:0.3rem 0.8rem;border:1px solid var(--border);color:var(--ink2);border-radius:2px}
+.experience-section{background:var(--surface)}
+.exp-timeline{position:relative;padding-left:2rem}
+.exp-timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--border)}
+.exp-item{position:relative;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
+.exp-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.exp-dot{position:absolute;left:-2.35rem;top:0.3rem;width:10px;height:10px;background:var(--gold);border-radius:50%}
+.exp-date{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.4rem;font-weight:500}
+.exp-item h3{font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:0.15rem}
+.exp-item h4{font-size:0.85rem;color:var(--ink3);margin-bottom:0.8rem;font-family:'DM Sans',sans-serif;font-weight:400}
+.exp-item p{font-size:0.88rem;color:var(--ink2);line-height:1.75}
+.exp-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.8rem}
+.exp-tag{font-size:0.68rem;padding:0.2rem 0.7rem;background:var(--surface2);color:var(--ink3);border-radius:2px}
+.contact-section{background:var(--accent);padding:5rem 2rem}
+.contact-section .section-label{color:var(--gold)}
+.contact-section .section-title{color:#fff}
+.contact-section .section-rule{background:var(--gold)}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.contact-card{background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.2);padding:1.5rem}
+.contact-card h4{font-family:'DM Sans',sans-serif;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.contact-card a,.contact-card p{font-size:0.95rem;color:rgba(255,255,255,0.8);text-decoration:none}
+.contact-card a:hover{color:var(--gold)}
+footer{background:#08111d;color:rgba(255,255,255,0.35);text-align:center;padding:1.5rem;font-size:0.8rem}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:5rem}
+  .hero-right{display:none}
+  .hero h1{font-size:2.4rem}
+  .comp-grid,.portfolio-grid{grid-template-columns:1fr 1fr}
+  .result-grid{grid-template-columns:1fr 1fr}
+  .bi-chart{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .comp-grid,.portfolio-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2rem}
+  .nav-links{display:none}
+  .modal-body{padding:1.5rem}
+  .modal-header{padding:1.5rem}
+  .result-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#"><span>Muhammad Hussain</span> Saeed</a>
+    <ul class="nav-links">
+      <li><a href="#competencies">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-tag">Digital Marketing & Content Specialist</div>
+    <div class="hero-divider"></div>
+    <h1>Strategic Narratives.<br><em>Measurable Impact.</em></h1>
+    <p class="hero-sub">Social Media Strategist &amp; Content Creator with 8+ years delivering results-driven content across health, tech, property, education, and e-commerce — backed by analytics, built for diverse audiences.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">300+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Industries Served</div>
+      </div>
+    </div>
+    <a class="btn-primary" href="#portfolio">View Work Samples</a>
+    <a class="btn-outline" href="#contact">Get in Touch</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <h4>Cross-Industry Experience</h4>
+      <p>Delivered content strategy and copywriting across health, fitness, tech, property, education, and e-commerce — adapting voice and approach to each brand's audience.</p>
+    </div>
+    <div class="hero-card">
+      <h4>Data-Driven Strategy</h4>
+      <p>Analytics work backed by Google Analytics, Power BI, and Excel — turning content performance data into sharper targeting and smarter decisions.</p>
+    </div>
+    <div class="hero-card">
+      <h4>Versatile Writing</h4>
+      <p>Strong written communicator across multiple formats — from long-form articles and press releases to captions, emails, and ad copy — adapting tone and depth to suit each audience.</p>
+    </div>
+  </div>
+</section>
+
+<section class="competencies" id="competencies">
+  <div class="container">
+    <div class="section-label">Core Capabilities</div>
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="section-rule"></div>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <div class="comp-icon">📱</div>
+        <h3>Social Media Strategy</h3>
+        <p>Multi-platform content strategies across health, education, tech, property, and e-commerce. Experienced in LinkedIn, Twitter/X, Facebook, and Instagram for both B2B and B2C audiences.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">📊</div>
+        <h3>Data Analytics</h3>
+        <p>Google Analytics, Power BI, and Excel for performance tracking, audience insights, and data-informed content decisions — applied across client websites, blogs, and social pages.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">✍️</div>
+        <h3>Content &amp; Technical Writing</h3>
+        <p>Press releases, thought leadership articles, blog posts, business plans, and website copy — delivered for clients across health, fitness, tech, property, and education sectors.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">🎬</div>
+        <h3>Visual &amp; Video Storytelling</h3>
+        <p>Short-form video scripts, animated content, social captions, and brand messaging — produced across platforms including YouTube Shorts and Facebook using tools like Instadoodle and Canva.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">🎯</div>
+        <h3>Market Research &amp; Insights</h3>
+        <p>Trend analysis, competitor monitoring, and audience research across multiple industries — identifying high-performing content formats, posting patterns, and engagement opportunities.</p>
+      </div>
+      <div class="comp-card">
+        <div class="comp-icon">📢</div>
+        <h3>Media &amp; Press Relations</h3>
+        <p>Press release writing, content publishing, and public-facing communications — delivered for clients in health, tech, education, and e-commerce across digital and print channels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-section" id="portfolio">
+  <div class="container">
+    <div class="section-label">Featured Work</div>
+    <h2 class="section-title">Portfolio Highlights</h2>
+    <div class="section-rule"></div>
+    <p style="font-size:0.9rem;color:var(--ink3);margin-top:-1.5rem;margin-bottom:2rem">Click any project to view detailed work samples, deliverables, and results.</p>
+  </div>
+  <div style="max-width:1140px;margin:0 auto">
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item" onclick="openModal('m1')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#1a2332 60%,#2d3f5a)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><rect x="10" y="22" width="28" height="46" rx="3" fill="#c9a84c" opacity="0.2"/><rect x="30" y="12" width="28" height="56" rx="3" fill="#c9a84c" opacity="0.5"/><rect x="52" y="30" width="28" height="38" rx="3" fill="#c9a84c" opacity="0.85"/></svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Social Media Ads</div>
+          <h3>Facebook Event Promotion Campaigns</h3>
+          <p>Ad copy and campaign structure for event promotions across education, restaurant, and e-commerce clients — from awareness to conversion.</p>
+          <div class="p-chips"><span class="p-chip">Facebook Ads</span><span class="p-chip">Event Promotion</span><span class="p-chip">Multi-niche</span></div>
+        </div>
+        <div class="p-overlay"><span>View Work Samples</span></div>
+      </div>
+
+      <div class="portfolio-item" onclick="openModal('m2')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#0f2027 60%,#1a3a4a)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><circle cx="45" cy="45" r="28" stroke="#c9a84c" stroke-width="1.5" opacity="0.3"/><circle cx="45" cy="45" r="18" stroke="#c9a84c" stroke-width="1.5" opacity="0.55"/><circle cx="45" cy="45" r="7" fill="#c9a84c" opacity="0.9"/><line x1="45" y1="17" x2="45" y2="73" stroke="#c9a84c" stroke-width="1" opacity="0.25"/><line x1="17" y1="45" x2="73" y2="45" stroke="#c9a84c" stroke-width="1" opacity="0.25"/></svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Data Analytics</div>
+          <h3>Content Performance & Analytics</h3>
+          <p>Google Analytics, Power BI, and Excel used across client websites and social pages — tracking performance and turning data into content decisions.</p>
+          <div class="p-chips"><span class="p-chip">Power BI</span><span class="p-chip">Google Analytics</span><span class="p-chip">Excel</span></div>
+        </div>
+        <div class="p-overlay"><span>View Work Samples</span></div>
+      </div>
+
+      <div class="portfolio-item" onclick="openModal('m3')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#2d1f0f 55%,#4a3010)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><rect x="20" y="28" width="50" height="8" rx="2" fill="#c9a84c" opacity="0.9"/><rect x="20" y="44" width="36" height="6" rx="2" fill="#c9a84c" opacity="0.55"/><rect x="20" y="58" width="26" height="6" rx="2" fill="#c9a84c" opacity="0.3"/><rect x="20" y="17" width="14" height="5" rx="1" fill="#c9a84c" opacity="0.65"/></svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Copywriting</div>
+          <h3>Multi-Channel Copywriting Portfolio</h3>
+          <p>Website copy, email campaigns, Facebook posts, LinkedIn content, and captions across health, property, tech, and education clients.</p>
+          <div class="p-chips"><span class="p-chip">Email Copy</span><span class="p-chip">Website Copy</span><span class="p-chip">Multi-niche</span></div>
+        </div>
+        <div class="p-overlay"><span>View Work Samples</span></div>
+      </div>
+
+      <div class="portfolio-item" onclick="openModal('m4')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#111827 60%,#1e3a5f)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><polyline points="15,65 30,45 45,55 60,30 75,20" stroke="#c9a84c" stroke-width="2.5" fill="none"/><circle cx="75" cy="20" r="4" fill="#c9a84c"/><circle cx="60" cy="30" r="3" fill="#c9a84c" opacity="0.75"/><circle cx="45" cy="55" r="3" fill="#c9a84c" opacity="0.5"/><circle cx="30" cy="45" r="3" fill="#c9a84c" opacity="0.5"/></svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Content Research</div>
+          <h3>Content Strategy Research</h3>
+          <p>Competitor and content research across multiple niches — mapping top-performing formats, posting patterns, and engagement trends to inform client strategy.</p>
+          <div class="p-chips"><span class="p-chip">Research</span><span class="p-chip">Excel</span><span class="p-chip">Strategy</span></div>
+        </div>
+        <div class="p-overlay"><span>View Work Samples</span></div>
+      </div>
+
+      <div class="portfolio-item" onclick="openModal('m5')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#1a0a0a 55%,#3a1a0a)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><rect x="14" y="24" width="46" height="38" rx="4" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.45"/><polygon points="50,43 66,37 66,51" fill="#c9a84c" opacity="0.85"/><rect x="22" y="31" width="22" height="4" rx="1" fill="#c9a84c" opacity="0.3"/><rect x="22" y="40" width="16" height="3" rx="1" fill="#c9a84c" opacity="0.25"/></svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Video Storytelling</div>
+          <h3>Animated Video Scripts &amp; Production</h3>
+          <p>Scripted and produced short-form animated videos on motivation, habits, and self-improvement — published on YouTube and YouTube Shorts using Instadoodle.</p>
+          <div class="p-chips"><span class="p-chip">Script Writing</span><span class="p-chip">Instadoodle</span><span class="p-chip">YouTube</span></div>
+        </div>
+        <div class="p-overlay"><span>View Work Samples</span></div>
+      </div>
+
+      <div class="portfolio-item" onclick="openModal('m6')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#0d1117 60%,#1a2332)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><rect x="20" y="15" width="50" height="60" rx="3" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.4"/><rect x="28" y="26" width="34" height="3" rx="1" fill="#c9a84c" opacity="0.8"/><rect x="28" y="35" width="28" height="2.5" rx="1" fill="#c9a84c" opacity="0.55"/><rect x="28" y="43" width="30" height="2.5" rx="1" fill="#c9a84c" opacity="0.4"/><rect x="28" y="51" width="20" height="2.5" rx="1" fill="#c9a84c" opacity="0.3"/><rect x="28" y="59" width="25" height="2.5" rx="1" fill="#c9a84c" opacity="0.2"/></svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Professional Writing</div>
+          <h3>Professional Writing Portfolio</h3>
+          <p>Press releases, blog posts, business plans, and website copy across 300+ projects — health, tech, property, education, and e-commerce clients globally.</p>
+          <div class="p-chips"><span class="p-chip">Press Releases</span><span class="p-chip">Blog Posts</span><span class="p-chip">Business Plans</span></div>
+        </div>
+        <div class="p-overlay"><span>View Work Samples</span></div>
+      </div>
+
+      <div class="portfolio-item" onclick="openModal('m7')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#0a2a1a 60%,#0d3d22)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+              <rect x="12" y="18" width="66" height="52" rx="4" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.4"/>
+              <rect x="12" y="18" width="66" height="13" rx="4" fill="#c9a84c" opacity="0.12"/>
+              <circle cx="22" cy="24.5" r="3" fill="#c9a84c" opacity="0.7"/>
+              <circle cx="32" cy="24.5" r="3" fill="#c9a84c" opacity="0.4"/>
+              <circle cx="42" cy="24.5" r="3" fill="#c9a84c" opacity="0.2"/>
+              <rect x="22" y="40" width="46" height="3" rx="1" fill="#c9a84c" opacity="0.6"/>
+              <rect x="22" y="50" width="36" height="2.5" rx="1" fill="#c9a84c" opacity="0.4"/>
+              <rect x="22" y="59" width="26" height="2.5" rx="1" fill="#c9a84c" opacity="0.25"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Live Website · Personal Finance</div>
+          <h3>Money Cornucopia</h3>
+          <p>A live personal finance blog — built, written, and managed independently. Covers investing, saving, and financial literacy with clear, reader-first writing.</p>
+          <div class="p-chips"><span class="p-chip">WordPress</span><span class="p-chip">Blog Writing</span><span class="p-chip">Finance</span></div>
+        </div>
+        <div class="p-overlay"><span>View Website</span></div>
+      </div>
+
+      <div class="portfolio-item" onclick="openModal('m8')">
+        <div class="p-img">
+          <div class="p-img-inner" style="background:linear-gradient(135deg,#1f0a2a 60%,#3a1050)">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+              <rect x="18" y="20" width="54" height="50" rx="3" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.4"/>
+              <path d="M30 38 Q45 30 60 38" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.6"/>
+              <circle cx="30" cy="38" r="3" fill="#c9a84c" opacity="0.8"/>
+              <circle cx="60" cy="38" r="3" fill="#c9a84c" opacity="0.8"/>
+              <path d="M34 50 Q45 44 56 50" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.4"/>
+              <rect x="38" y="58" width="14" height="5" rx="2" fill="#c9a84c" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-tag">Creative &amp; Satirical Writing</div>
+          <h3>Diary of a Lazy Bum</h3>
+          <p>A satirical lifestyle blog written with wit and dark humour — proving that the same writer who crafts serious copy can also make an audience laugh out loud.</p>
+          <div class="p-chips"><span class="p-chip">Satire</span><span class="p-chip">Creative Writing</span><span class="p-chip">Humour</span></div>
+        </div>
+        <div class="p-overlay"><span>View Website</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="experience-section" id="experience">
+  <div class="container">
+    <div class="section-label">Professional Journey</div>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-rule"></div>
+    <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:4rem;align-items:start">
+      <div class="exp-timeline">
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-date">Jan 2019 – Present</div>
+          <h3>Freelance Writer &amp; Digital Marketing Specialist</h3>
+          <h4>Fiverr &amp; Upwork · Remote</h4>
+          <p>Delivered social media strategies, copywriting, and data-driven content across 300+ projects for clients in health, fitness, tech, property, education, and e-commerce. Created press releases, blog posts, business plans, email copy, Facebook ads, and website copy. Used Google Analytics, Power BI, and Excel for performance tracking and content insights.</p>
+          <div class="exp-tags"><span class="exp-tag">Social Strategy</span><span class="exp-tag">Power BI</span><span class="exp-tag">Copywriting</span><span class="exp-tag">Multi-niche</span></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-date">Mar 2021 – Present</div>
+          <h3>IELTS Instructor</h3>
+          <h4>ESLMS &amp; AUS PAK International, Faisalabad</h4>
+          <p>Guided 50+ students in advanced communication and academic writing techniques. Redesigned curriculum using data analysis to improve student outcomes by 35%. Developed instructional materials focused on clarity, precision, and professional English — skills that directly strengthen content strategy and writing work.</p>
+          <div class="exp-tags"><span class="exp-tag">Communication</span><span class="exp-tag">Curriculum Design</span><span class="exp-tag">Data Analysis</span></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-dot"></div>
+          <div class="exp-date">Apr 2018 – Oct 2018</div>
+          <h3>Research Assistant</h3>
+          <h4>Lahore Garrison University</h4>
+          <p>Analyzed complex cases and produced detailed technical reports. Developed strong research, investigative, and documentation skills within an academic environment — foundation for data-informed content and writing work.</p>
+          <div class="exp-tags"><span class="exp-tag">Research</span><span class="exp-tag">Technical Reports</span><span class="exp-tag">Analysis</span></div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--surface2);border:1px solid var(--border);padding:2rem;margin-bottom:1.5rem">
+          <div class="section-label" style="margin-bottom:0.8rem">Tools &amp; Platforms</div>
+          <div class="tag-cloud">
+            <span class="tag">LinkedIn</span><span class="tag">Twitter/X</span><span class="tag">Instagram</span>
+            <span class="tag">Facebook</span><span class="tag">Power BI</span>
+            <span class="tag">Excel</span><span class="tag">Canva</span>
+            <span class="tag">Meta Business Suite</span><span class="tag">Google Analytics</span>
+            <span class="tag">Hootsuite</span>
+          </div>
+        </div>
+        <div style="background:var(--accent);padding:2rem;color:#fff">
+          <div class="section-label" style="color:var(--gold);margin-bottom:0.8rem">My Approach</div>
+          <p style="font-size:0.88rem;line-height:1.8;color:rgba(255,255,255,0.72);margin-bottom:1rem">Good content doesn't just say something — it says the right thing to the right person at the right moment. Across 8+ years and 300+ projects, that principle has guided every brief, every caption, and every campaign I've worked on.</p>
+          <p style="font-size:0.88rem;line-height:1.8;color:rgba(255,255,255,0.72)">Whether the brand is a fitness startup or an established institution, the approach is the same: understand the audience deeply, write with clarity and intent, and measure what matters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <div class="section-rule"></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Phone</h4>
+        <a href="tel:+923014999818">+92-301-4999818</a>
+      </div>
+      <div class="contact-card">
+        <h4>Email</h4>
+        <a href="mailto:hussainsaeed009@gmail.com">hussainsaeed009@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <h4>Location</h4>
+        <p>Faisalabad, Punjab, Pakistan</p>
+      </div>
+      <div class="contact-card">
+        <h4>LinkedIn</h4>
+        <a href="https://linkedin.com/in/muhammad-hussain-saeed" target="_blank">View Profile →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Muhammad Hussain Saeed · Digital Marketing & Content Specialist</footer>
+
+<!-- ══════════ MODAL 1: Social Media Campaign ══════════ -->
+<div class="modal-bg" id="m1">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m1')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Facebook Ads · Event Promotion · Multi-Industry</div>
+      <h2>Facebook Event Promotion Campaigns</h2>
+      <p>Planned and wrote Facebook ad campaigns for clients across the education, restaurant, and e-commerce sectors — covering audience targeting logic, ad copy, and campaign structure for event-driven promotions.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>Campaign Scope — Across Client Projects</h4>
+        <div class="result-grid">
+          <div class="result-box"><div class="result-num">3+</div><div class="result-label">Industries: Education, F&B, E-commerce</div></div>
+          <div class="result-box"><div class="result-num">FB Ads</div><div class="result-label">Primary channel used across campaigns</div></div>
+          <div class="result-box"><div class="result-num">Event</div><div class="result-label">Promotion was the core campaign objective</div></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Sample Ad Copy — Education Institute Open Day</h4>
+        <div class="sample-post">
+          <div class="post-meta">
+            <div class="post-avatar">IA</div>
+            <div><strong style="font-size:0.82rem;color:#1c1e21;display:block">Institute Ad · Sponsored</strong><span>Event Promotion · Facebook</span></div>
+          </div>
+          <p>🎓 <strong>Your future starts with one visit.</strong></p>
+          <p>Join us at our <strong>Open Day — Saturday, 10 AM</strong>. Meet instructors, explore programs, and ask the questions that actually matter before you decide.</p>
+          <p>✅ Free entry<br>✅ One-on-one faculty sessions<br>✅ On-the-spot guidance for admissions</p>
+          <p>Limited seats. Register now — link in bio.</p>
+          <div class="post-engagement">Objective: Event responses · Audience: 18–30, local radius targeting</div>
+        </div>
+        <div class="sample-post">
+          <div class="post-meta">
+            <div class="post-avatar">RS</div>
+            <div><strong style="font-size:0.82rem;color:#1c1e21;display:block">Restaurant Ad · Sponsored</strong><span>Event Promotion · Facebook</span></div>
+          </div>
+          <p>🍽️ <strong>We're celebrating — and you're invited.</strong></p>
+          <p>Our <strong>Grand Opening Night</strong> is here. Special menu. Live ambiance. An evening worth clearing your calendar for.</p>
+          <p>📍 [Location] &nbsp;|&nbsp; 🕖 7 PM onwards<br>Book your table before it fills up.</p>
+          <p style="color:#65676b;font-size:0.82rem;margin-top:0.5rem">Tap "Interested" or message us to reserve.</p>
+          <div class="post-engagement">Objective: Event awareness + foot traffic · Audience: Food enthusiasts, local targeting</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Campaign Structure — Event Promotion Framework</h4>
+        <table class="table-sample">
+          <tr><th>Phase</th><th>Timing</th><th>Ad Objective</th><th>Copy Focus</th></tr>
+          <tr><td>Awareness</td><td>7–10 days before</td><td>Reach / Event responses</td><td>Intrigue + date announcement</td></tr>
+          <tr><td>Consideration</td><td>3–5 days before</td><td>Engagement</td><td>Benefits + social proof</td></tr>
+          <tr><td>Conversion</td><td>24–48 hrs before</td><td>Messages / Clicks</td><td>Urgency + direct CTA</td></tr>
+          <tr><td>Reminder</td><td>Day of event</td><td>Reach</td><td>Last-chance nudge</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MODAL 2: Data Analytics ══════════ -->
+<div class="modal-bg" id="m2">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m2')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Data Analytics · Power BI · Google Analytics · Excel</div>
+      <h2>Content Performance & Analytics Work</h2>
+      <p>Used Google Analytics, Power BI, and Excel to track content performance, audience behaviour, and campaign results across client websites, blogs, and social pages — turning raw data into actionable content decisions.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>Tools Used Across Projects</h4>
+        <div class="result-grid">
+          <div class="result-box"><div class="result-num">GA4</div><div class="result-label">Google Analytics — website & blog tracking</div></div>
+          <div class="result-box"><div class="result-num">Power BI</div><div class="result-label">Dashboard reporting for clients</div></div>
+          <div class="result-box"><div class="result-num">Excel</div><div class="result-label">Engagement & follower growth tracking</div></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Sample Insights — Google Analytics Website Review</h4>
+        <div class="insight-row">
+          <div class="insight-icon">01</div>
+          <div class="insight-text"><strong>Traffic source breakdown revealed organic search underperformance</strong> — most sessions came from direct traffic, indicating strong brand recall but weak SEO reach. Recommended blog content calendar targeting long-tail keywords.</div>
+        </div>
+        <div class="insight-row">
+          <div class="insight-icon">02</div>
+          <div class="insight-text"><strong>Bounce rate on key landing pages exceeded 70%</strong> — identified mismatched ad-to-landing-page messaging as the cause. Rewrote page copy to align with ad intent, improving session depth.</div>
+        </div>
+        <div class="insight-row">
+          <div class="insight-icon">03</div>
+          <div class="insight-text"><strong>Mobile users accounted for over 80% of sessions</strong> — flagged formatting and load-speed issues on mobile. Adjusted content structure to prioritise short paragraphs and scannable layouts.</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Social Media Tracking — Excel Dashboard Sample</h4>
+        <div class="bi-chart">
+          <div class="chart-bar-wrap">
+            <h5>Follower Growth — Monthly Tracking</h5>
+            <div class="bar-row"><span class="bar-label">Month 1</span><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><span class="bar-val">Base</span></div>
+            <div class="bar-row"><span class="bar-label">Month 2</span><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div><span class="bar-val">+15%</span></div>
+            <div class="bar-row"><span class="bar-label">Month 3</span><div class="bar-track"><div class="bar-fill" style="width:62%"></div></div><span class="bar-val">+28%</span></div>
+            <div class="bar-row"><span class="bar-label">Month 4</span><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="bar-val">+40%</span></div>
+          </div>
+          <div class="chart-bar-wrap">
+            <h5>Engagement by Content Type</h5>
+            <div class="bar-row"><span class="bar-label">Question posts</span><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div><span class="bar-val">High</span></div>
+            <div class="bar-row"><span class="bar-label">How-to posts</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div><span class="bar-val">Good</span></div>
+            <div class="bar-row"><span class="bar-label">Promotional</span><div class="bar-track"><div class="bar-fill" style="width:42%"></div></div><span class="bar-val">Avg</span></div>
+            <div class="bar-row"><span class="bar-label">Text-only posts</span><div class="bar-track"><div class="bar-fill" style="width:28%"></div></div><span class="bar-val">Low</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MODAL 3: Brand Voice ══════════ -->
+<div class="modal-bg" id="m3">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m3')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Copywriting · Brand Voice · Multi-Platform · Multi-Niche</div>
+      <h2>Multi-Channel Copywriting Portfolio</h2>
+      <p>Written copy across health, fitness, tech, property, education, and e-commerce clients — including website copy, email campaigns, Facebook posts, LinkedIn content, and captions. Adapting voice and tone to fit different brands and audiences is a core part of the work.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>Sample Email Copy — Health & Fitness Client</h4>
+        <div class="doc-preview">
+          <div class="doc-header">
+            <span>Subject: Your first week is free — here's what's waiting for you</span>
+          </div>
+          <div class="doc-body">
+            <p>Hi [Name],</p>
+            <p>You've been thinking about it. Maybe for a while now. The question isn't whether you want to get fit — it's whether this program will actually work for someone like you, with your schedule, your starting point, and your goals.</p>
+            <p>We get it. That's exactly why we built the first week free — no card, no commitment. Just seven days to try the workouts, feel the difference, and decide for yourself.</p>
+            <p>Here's what's inside:<br>
+            ✅ 3 beginner-friendly sessions designed for real results<br>
+            ✅ A nutrition guide that doesn't make eating feel like punishment<br>
+            ✅ Daily check-ins from your assigned coach</p>
+            <p><strong>Start your free week →</strong> [Button]</p>
+            <p>If it's not for you, you walk away. No awkward cancellation. No fine print.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Before &amp; After Rewrite — Website Copy</h4>
+        <div class="sample-box">
+          <strong>Before — Original Client Draft</strong>
+          "We offer a wide range of professional services and solutions to meet your real estate requirements including buying, selling, renting, and property management services for residential and commercial properties."
+        </div>
+        <div class="sample-box" style="border-left-color:var(--accent)">
+          <strong>After — Rewritten</strong>
+          "Whether you're buying your first home, growing a rental portfolio, or selling a commercial property — we handle the complexity, so you can focus on the decision that matters. Straightforward guidance. No jargon. No pressure."
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Platform Tone Matrix — Across Client Work</h4>
+        <table class="table-sample">
+          <tr><th>Platform</th><th>Tone</th><th>Format</th><th>CTA Style</th></tr>
+          <tr><td>Facebook Ads</td><td>Direct, benefit-led</td><td>Short copy + strong hook</td><td>Click / Message / Sign Up</td></tr>
+          <tr><td>LinkedIn Posts</td><td>Professional, insight-driven</td><td>Story or tip format</td><td>Comment / Share / Follow</td></tr>
+          <tr><td>Email</td><td>Personal, value-first</td><td>Conversational narrative</td><td>Single CTA button</td></tr>
+          <tr><td>Website Copy</td><td>Clear, trust-building</td><td>Problem → Solution → Proof</td><td>Book / Get Started / Learn More</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MODAL 4: Market Research ══════════ -->
+<div class="modal-bg" id="m4">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m4')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Content Research · Competitor Analysis · Strategy</div>
+      <h2>Content Strategy Research</h2>
+      <p>As part of freelance client work, conducted content and competitor research across multiple industries — mapping what top-performing brands post, how often, in what format, and what drives the most engagement — then translating those findings into strategic recommendations.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>Research Scope — Across Client Projects</h4>
+        <div class="result-grid">
+          <div class="result-box"><div class="result-num">6</div><div class="result-label">Industries researched across projects</div></div>
+          <div class="result-box"><div class="result-num">Multi</div><div class="result-label">Platforms: FB, LinkedIn, Instagram</div></div>
+          <div class="result-box"><div class="result-num">Excel</div><div class="result-label">Primary tool for tracking & analysis</div></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Content Benchmarking — Sample Analysis (Health & Fitness Niche)</h4>
+        <div class="bi-chart">
+          <div class="chart-bar-wrap">
+            <h5>Top Content Types by Engagement</h5>
+            <div class="bar-row"><span class="bar-label">Before/After</span><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div><span class="bar-val">High</span></div>
+            <div class="bar-row"><span class="bar-label">Tips & How-tos</span><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div><span class="bar-val">Good</span></div>
+            <div class="bar-row"><span class="bar-label">Client Results</span><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div><span class="bar-val">Good</span></div>
+            <div class="bar-row"><span class="bar-label">Promotional</span><div class="bar-track"><div class="bar-fill" style="width:32%"></div></div><span class="bar-val">Low</span></div>
+          </div>
+          <div class="chart-bar-wrap">
+            <h5>Best Posting Days (Facebook)</h5>
+            <div class="bar-row"><span class="bar-label">Wednesday</span><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div><span class="bar-val">Peak</span></div>
+            <div class="bar-row"><span class="bar-label">Friday</span><div class="bar-track"><div class="bar-fill" style="width:74%"></div></div><span class="bar-val">High</span></div>
+            <div class="bar-row"><span class="bar-label">Monday</span><div class="bar-track"><div class="bar-fill" style="width:55%"></div></div><span class="bar-val">Avg</span></div>
+            <div class="bar-row"><span class="bar-label">Weekend</span><div class="bar-track"><div class="bar-fill" style="width:36%"></div></div><span class="bar-val">Low</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Key Strategic Findings — Applied to Client Content Plans</h4>
+        <div class="insight-row">
+          <div class="insight-icon">01</div>
+          <div class="insight-text"><strong>Value-first content consistently outperforms promotional posts</strong> — recommended a content mix of 70% educational or storytelling content, 30% promotional to build trust before selling.</div>
+        </div>
+        <div class="insight-row">
+          <div class="insight-icon">02</div>
+          <div class="insight-text"><strong>Shorter captions with a clear single CTA outperform longer copy on Facebook</strong> — restructured client ad copy to lead with the hook and end with one direct action.</div>
+        </div>
+        <div class="insight-row">
+          <div class="insight-icon">03</div>
+          <div class="insight-text"><strong>Responding to comments within the first hour significantly boosts organic reach</strong> — built an engagement protocol into client content delivery to ensure post-publishing follow-through.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MODAL 5: Video Content ══════════ -->
+<div class="modal-bg" id="m5">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m5')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Video Storytelling · Script Writing · Animated Video · YouTube</div>
+      <h2>Video Storytelling — Scripts &amp; Animated Content</h2>
+      <p>Scripted and produced short-form animated videos on motivation, habits, and self-improvement — published on YouTube and YouTube Shorts. Full production using Instadoodle: concept, script, and animation built from scratch.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>Production Scope</h4>
+        <div class="result-grid">
+          <div class="result-box"><div class="result-num">Script</div><div class="result-label">Written from scratch for each video</div></div>
+          <div class="result-box"><div class="result-num">Animated</div><div class="result-label">Produced using Instadoodle</div></div>
+          <div class="result-box"><div class="result-num">YouTube</div><div class="result-label">Published on YouTube &amp; Shorts</div></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Sample Script — "The 2-Minute Rule That Changes Everything"</h4>
+        <div class="sample-box">
+          <strong>Hook (0:00–0:08) — Opening frame</strong>
+          "What if the reason you keep procrastinating has nothing to do with laziness — and everything to do with how you start? Here's a rule used by top performers that takes exactly two minutes to learn."
+        </div>
+        <div class="sample-box">
+          <strong>Core Concept (0:08–0:45) — Animation + narration</strong>
+          "The 2-Minute Rule is simple: if a task takes less than two minutes, do it now. But there's a deeper version — when you want to build a habit, make the starting version take two minutes or less. Want to read more? Open the book. Want to exercise? Put on your shoes. The goal isn't to do the habit. It's to show up for it. Momentum does the rest."
+        </div>
+        <div class="sample-box">
+          <strong>Close (0:45–1:00) — Call to reflect</strong>
+          "The hardest part of any habit isn't the discipline. It's the decision to begin. Make beginning easy — and everything that follows becomes possible."
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Content Themes Covered</h4>
+        <table class="table-sample">
+          <tr><th>Theme</th><th>Angle</th><th>Format</th></tr>
+          <tr><td>Habit Building</td><td>Science-backed, practical</td><td>Animated explainer</td></tr>
+          <tr><td>Motivation</td><td>Storytelling-led, emotional hook</td><td>Short narrated video</td></tr>
+          <tr><td>Self-Improvement</td><td>Relatable, actionable takeaway</td><td>YouTube Short</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ══════════ MODAL 6: Technical Writing ══════════ -->
+<div class="modal-bg" id="m6">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m6')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Press Releases · Blog Posts · Business Plans · Website Copy</div>
+      <h2>Professional Writing Portfolio</h2>
+      <p>Delivered professional writing across 300+ freelance projects — press releases, blog articles, business plans, and website copy for clients in health, fitness, tech, property, education, and e-commerce. Work delivered via Fiverr, Upwork, and direct client engagements.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>Sample Press Release — Fitness App Product Launch</h4>
+        <div class="doc-preview">
+          <div class="doc-header">
+            <span>FOR IMMEDIATE RELEASE</span>
+            <span style="font-size:0.75rem;opacity:0.6">Media Contact: Communications Team</span>
+          </div>
+          <div class="doc-body">
+            <div class="writing-sample">
+              <div class="headline">PulseFit Launches AI-Powered Personalized Training App, Bringing Expert Coaching to Everyday Athletes</div>
+              <p><strong>Lahore, Pakistan — March 2024</strong> — PulseFit today announced the official launch of its AI-driven fitness application, designed to deliver personalized workout and nutrition guidance to users at every fitness level — without the cost of a personal trainer.</p>
+              <p>The app analyzes each user's fitness history, goals, and available equipment to generate adaptive weekly plans that evolve with performance. An integrated progress tracker surfaces real-time insights, helping users stay motivated and adjust their approach based on actual results rather than guesswork.</p>
+              <p>"Most people quit fitness programs because they weren't built for them," said the Founder. "PulseFit changes that — your plan adjusts to you, not the other way around."</p>
+              <p>PulseFit is available now on iOS and Android. The first 30 days are free, with premium plans starting at PKR 499/month. Early adopters receive lifetime access to the nutrition planning module at no additional cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Sample Blog Opening — Tech Client</h4>
+        <div class="writing-sample" style="border:1px solid var(--border);padding:1.5rem">
+          <div class="headline">Why Your Business Doesn't Need More Content — It Needs Better Content</div>
+          <p>There's a myth that's quietly draining the budgets of thousands of small businesses: the idea that more content means more growth. Post more. Write more. Show up more. It sounds logical. It isn't.</p>
+          <p>The brands winning on social media right now aren't necessarily the ones posting every day. They're the ones whose content makes people stop scrolling — because it says something worth stopping for.</p>
+          <p>The question isn't "how often should we post?" It's "do we know what our audience actually wants to read?" Answer that honestly, and your content strategy writes itself...</p>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Writing Delivered — Across 300+ Projects</h4>
+        <table class="table-sample">
+          <tr><th>Document Type</th><th>Industries</th><th>Volume</th></tr>
+          <tr><td>Press Releases</td><td>Health, Tech, Property</td><td>Multiple projects</td></tr>
+          <tr><td>Blog Posts & Articles</td><td>Mixed niches</td><td>Ongoing across clients</td></tr>
+          <tr><td>Business Plans</td><td>Mixed, international clients</td><td>Several delivered</td></tr>
+          <tr><td>Website Copy</td><td>E-commerce, Education, Health</td><td>Multiple clients</td></tr>
+          <tr><td>Facebook & Email Copy</td><td>Restaurants, Education, Retail</td><td>Ongoing freelance work</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════ MODAL 7: Money Cornucopia ══════════ -->
+<div class="modal-bg" id="m7">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m7')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Live Website · Personal Finance Blog · WordPress</div>
+      <h2>Money Cornucopia</h2>
+      <p>A personal finance blog built, written, and managed independently — simplifying investing, saving, and wealth-building into clear, actionable content. Live at moneycornucopia.com.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>What This Demonstrates</h4>
+        <div class="result-grid">
+          <div class="result-box"><div class="result-num">Built</div><div class="result-label">WordPress site designed and managed solo</div></div>
+          <div class="result-box"><div class="result-num">Written</div><div class="result-label">All content researched and written in-house</div></div>
+          <div class="result-box"><div class="result-num">Active</div><div class="result-label">Regularly updated with new articles in 2026</div></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Sample Article Opening — "Oil Just Hit $100. Here's What That Means for Your Wallet."</h4>
+        <div class="writing-sample" style="border:1px solid var(--border);padding:1.5rem">
+          <div class="headline">Oil Just Hit $100. Here's What That Means for Your Wallet.</div>
+          <p>When was the last time you filled up your tank and didn't wince? If it's been a while, you're not imagining it. Petrol is genuinely, significantly more expensive than it was two months ago. And the reason isn't a glitch. It isn't seasonal. It's a full-blown global energy crisis — and your wallet is caught in the middle.</p>
+          <p>This piece breaks down exactly what's driving the price spike, what it means for your day-to-day spending, and — most importantly — what you can actually do about it.</p>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Topics Covered</h4>
+        <table class="table-sample">
+          <tr><th>Category</th><th>Example Articles</th></tr>
+          <tr><td>Investing</td><td>How to Start Investing with $100 · Stocks vs. Bonds Explained</td></tr>
+          <tr><td>Current Events</td><td>Oil Hits $100 — Impact on Your Wallet · Fed Meeting &amp; Your Money</td></tr>
+          <tr><td>Personal Finance</td><td>Save better, build wealth, avoid common financial mistakes</td></tr>
+        </table>
+      </div>
+      <div class="modal-section">
+        <h4>Visit the Site</h4>
+        <div class="sample-box">
+          <strong>Live URL</strong>
+          <a href="https://moneycornucopia.com" target="_blank" style="color:var(--gold-dark);font-size:1rem;font-weight:500">moneycornucopia.com →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MODAL 8: Diary of a Lazy Bum ══════════ -->
+<div class="modal-bg" id="m8">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m8')">✕</button>
+    <div class="modal-header">
+      <div class="modal-tag">Creative Writing · Satire · Humour · Lifestyle Blog</div>
+      <h2>Diary of a Lazy Bum</h2>
+      <p>A satirical lifestyle blog written with wit, dark humour, and a sharp observational voice. The same writer who produces serious copy and press releases — writing in a completely different register to prove range. Live at diaryofalazybum.com.</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4>Why This Is in the Portfolio</h4>
+        <div class="result-grid">
+          <div class="result-box"><div class="result-num">Range</div><div class="result-label">Serious copy AND satirical writing — same writer</div></div>
+          <div class="result-box"><div class="result-num">Voice</div><div class="result-label">Distinct, consistent, and intentionally witty</div></div>
+          <div class="result-box"><div class="result-num">Built</div><div class="result-label">Independently designed, written &amp; managed</div></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Sample Opening — "What Is a Lazy Bum? A True Definition"</h4>
+        <div class="writing-sample" style="border:1px solid var(--border);padding:1.5rem">
+          <div class="headline">What Is a Lazy Bum? A True Definition.</div>
+          <p>"What is a Lazy Bum?" he asked, trembling from the pressure of my nobility, my profound laziness, and the biting cold. It was a freezing night in mid-December. Everything had turned a murky shade of white. Cars were smothered in snow and the streets were eerily quiet. Even the commoners were too afraid to venture out.</p>
+          <p>I, however, had not moved from my position on the sofa in approximately eleven hours. This, I told him, is the answer to your question.</p>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>The Writing Skill This Shows</h4>
+        <div class="insight-row">
+          <div class="insight-icon">01</div>
+          <div class="insight-text"><strong>Satirical voice with genuine comic timing</strong> — the humour is constructed, not accidental. Pacing, word choice, and narrative structure are all deliberate.</div>
+        </div>
+        <div class="insight-row">
+          <div class="insight-icon">02</div>
+          <div class="insight-text"><strong>Audience awareness</strong> — the tone is calibrated to a specific reader. Same skill that makes ad copy and email campaigns land with the right people.</div>
+        </div>
+        <div class="insight-row">
+          <div class="insight-icon">03</div>
+          <div class="insight-text"><strong>Brand consistency</strong> — every post on the site sounds like the same person. Building and maintaining a consistent voice across content is a core content strategy skill.</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4>Visit the Site</h4>
+        <div class="sample-box">
+          <strong>Live URL</strong>
+          <a href="https://diaryofalazybum.com" target="_blank" style="color:var(--gold-dark);font-size:1rem;font-weight:500">diaryofalazybum.com →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(id){
+  document.getElementById(id).classList.add('active');
+  document.body.style.overflow='hidden';
+  document.getElementById(id).scrollTop=0;
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('active');
+  document.body.style.overflow='';
+}
+document.querySelectorAll('.modal-bg').forEach(function(bg){
+  bg.addEventListener('click',function(e){
+    if(e.target===this){
+      this.classList.remove('active');
+      document.body.style.overflow='';
+    }
+  });
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    document.querySelectorAll('.modal-bg.active').forEach(function(m){
+      m.classList.remove('active');
+      document.body.style.overflow='';
+    });
+  }
+});
+</script>
+</body>
+</html>
